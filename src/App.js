@@ -14,7 +14,7 @@ function App() {
         <HeaderComponent/>
         <div className="container">
           <Switch>
-            <Route path="/" exact component={ListAlbumComponent}></Route>
+            <Route path="/AlbumServiceTest" exact component={ListAlbumComponent}></Route>
             <Route path="/albums" exact component={ListAlbumComponent}></Route>
             <Route path="/add-album/:id" exact component={CreateAlbumComponent}></Route>
             <Route path="/view-album/:id" exact component={ViewAlbumComponent}></Route>
