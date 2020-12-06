@@ -45,11 +45,11 @@ class CreateAlbumComponent extends Component {
 
         if (this.state.id === '_add') {
             AlbumService.addAlbum(album).then( res => {
-                this.props.history.push('/react-frontend/albums'); 
+                this.props.history.push('/crud-frontend/albums'); 
             }); 
         } else {
             AlbumService.updateAlbum(album, this.state.id).then( res => {
-                this.props.history.push('/react-frontend/albums'); 
+                this.props.history.push('/crud-frontend/albums'); 
             }); 
         }
     }
@@ -71,7 +71,7 @@ class CreateAlbumComponent extends Component {
     }
 
     cancel() {
-        this.props.history.push('/react-frontend/albums'); 
+        this.props.history.push('/crud-frontend/albums'); 
     }
 
     getTitle() {
