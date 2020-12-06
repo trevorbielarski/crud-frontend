@@ -17,7 +17,7 @@ class AlbumService {
     }
 
     deleteAlbum(album) { // USING ALBUM INSTEAD OF ALBUMID
-        return axios.delete(ALBUM_API_BASE_URL + '/deleteAlbum', album)
+        return axios.delete(ALBUM_API_BASE_URL + '/deleteAlbum', album); 
     }
 
     updateAlbum(album) { // NOT USING ALBUMID - DOES IT MATTER THAT THERE'S NO ID IN THE PATH? 

@@ -45,11 +45,11 @@ class CreateAlbumComponent extends Component {
 
         if (this.state.id === '_add') {
             AlbumService.addAlbum(album).then( res => {
-                this.props.history.push('/AlbumServiceTest/albums'); 
+                this.props.history.push('/albums'); 
             }); 
         } else {
             AlbumService.updateAlbum(album, this.state.id).then( res => {
-                this.props.history.push('/AlbumServiceTest/albums'); 
+                this.props.history.push('/albums'); 
             }); 
         }
     }
