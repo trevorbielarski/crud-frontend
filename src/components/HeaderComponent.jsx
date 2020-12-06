@@ -13,7 +13,7 @@ class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                        <div><a href="/" className="navbar-brand">Album Management App</a></div>
+                        <div><a href="/AlbumServiceTest" className="navbar-brand">Album Management App</a></div> /* Change github repo name! */ 
                     </nav>
                 </header>
             </div>

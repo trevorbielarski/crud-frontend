@@ -21,15 +21,15 @@ class ListAlbumComponent extends Component {
     }
 
     viewAlbum(id) {
-        this.props.history.push(`/view-album/${id}`); 
+        this.props.history.push(`/AlbumServiceTest/view-album/${id}`); 
     }
 
     addAlbum() {
-        this.props.history.push('/add-album/_add'); 
+        this.props.history.push('/AlbumServiceTest/add-album/_add'); 
     }
 
     editAlbum(id) { // EDITING ALBUM BY ID??? 
-        this.props.history.push(`/add-album/${id}`); 
+        this.props.history.push(`/AlbumServiceTest/add-album/${id}`); 
     }
 
     componentDidMount() {
