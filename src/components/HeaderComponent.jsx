@@ -13,7 +13,7 @@ class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                        <div><a href="/crud-frontend/" className="navbar-brand">Album Management App</a></div> 
+                        <div><a href="/crud-frontend-app/" className="navbar-brand">Album Management App</a></div> 
                     </nav>
                 </header>
             </div>
