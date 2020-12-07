@@ -21,7 +21,7 @@ class AlbumService {
     }
 
     updateAlbum(album) { // NOT USING ALBUMID - DOES IT MATTER THAT THERE'S NO ID IN THE PATH? 
-        return axios.put(ALBUM_API_BASE_URL + '/updateAlbum', album);  /* */
+        return axios.put(ALBUM_API_BASE_URL + '/updateAlbum', album);  
     }
 
 }
