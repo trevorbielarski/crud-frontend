@@ -42,7 +42,7 @@ class UpdateAlbumComponent extends Component {
         console.log('album => ' + JSON.stringify(album));
         console.log('id => ' + JSON.stringify(this.state.id));
         AlbumService.updateAlbum(album, this.state.id).then( res => {
-            this.props.history.push('/crud-frontend-app/albums');
+            this.props.history.push('/crud-frontend/albums');
         });
     }
     
@@ -63,7 +63,7 @@ class UpdateAlbumComponent extends Component {
     }
 
     cancel(){
-        this.props.history.push('/crud-frontend-app/albums');
+        this.props.history.push('/crud-frontend/albums');
     }
 
     render() {
