@@ -1,6 +1,6 @@
 import axios from 'axios'; 
 
-const ALBUM_API_BASE_URL = "http://albumcrudtest3-env.eba-ubhrhzmu.us-east-1.elasticbeanstalk.com"; 
+const ALBUM_API_BASE_URL = "https://crud.bielarski.org/getAllAlbums"; 
 
 class AlbumService { 
 
