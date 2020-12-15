@@ -1,6 +1,6 @@
 import axios from 'axios'; 
 
-const ALBUM_API_BASE_URL = "https://crud.bielarski.org/getAllAlbums"; 
+const ALBUM_API_BASE_URL = "https://crud.bielarski.org"; 
 
 class AlbumService { 
 
