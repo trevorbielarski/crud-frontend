@@ -2,7 +2,7 @@
   "name": "react-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sodapopcurtis.github.io/crud-frontend/",
+  "homepage": "https://sodapopcurtis.github.io/frontend/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
