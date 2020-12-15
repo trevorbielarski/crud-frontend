@@ -21,15 +21,15 @@ class ListAlbumComponent extends Component {
     }
 
     viewAlbum(id) {
-        this.props.history.push(`/frontend/view-album/${id}`); 
+        this.props.history.push(`/crud-frontend/view-album/${id}`); 
     }
 
     addAlbum() {
-        this.props.history.push('/frontend/add-album/_add'); 
+        this.props.history.push('/crud-frontend/add-album/_add'); 
     }
 
     editAlbum(id) { // EDITING ALBUM BY ID??? 
-        this.props.history.push(`/frontend/add-album/${id}`); 
+        this.props.history.push(`/crud-frontend/add-album/${id}`); 
     }
 
     componentDidMount() {
