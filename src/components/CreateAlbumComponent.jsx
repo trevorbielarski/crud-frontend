@@ -95,12 +95,12 @@ class CreateAlbumComponent extends Component {
                             <div className="card-body">
                                 <form>
                                     <div className="form-group">
-                                        <label>Album Name: </label>
-                                        <input placeholder="Album Name" name="albumName" className="form-control" value={this.state.albumName} onChange={this.changeAlbumNameHandler}/>
-                                    </div>
-                                    <div className="form-group">
                                         <label>Artist Name: </label>
                                         <input placeholder="Artist Name" name="artistName" className="form-control" value={this.state.artistName} onChange={this.changeArtistNameHandler}/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Album Name: </label>
+                                        <input placeholder="Album Name" name="albumName" className="form-control" value={this.state.albumName} onChange={this.changeAlbumNameHandler}/>
                                     </div>
                                     <div className="form-group">
                                         <label>Genre: </label>

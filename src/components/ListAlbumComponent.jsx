@@ -14,7 +14,7 @@ class ListAlbumComponent extends Component {
         this.deleteAlbum = this.deleteAlbum.bind(this); 
     }
 
-    deleteAlbum(id) { // USING ALBUM INSTEAD OF ALBUMID ?????????????????????????
+    deleteAlbum(id) { 
         AlbumService.deleteAlbum(id).then( res => { // res is the HTTP response
             this.setState({albums: this.state.albums.filter(album => album.id !== id)})
         }); 

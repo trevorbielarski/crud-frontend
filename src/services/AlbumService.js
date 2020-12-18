@@ -4,23 +4,23 @@ const ALBUM_API_BASE_URL = "https://crud.bielarski.org";
 
 class AlbumService { 
 
-    addAlbum(album) {
-        return axios.post(ALBUM_API_BASE_URL + '/saveAlbum', album); 
+    addAlbum(album) { // OKAY
+        return axios.post(ALBUM_API_BASE_URL + '/addAlbum', album); 
     }
 
-    getAlbumById(albumId) {
+    getAlbumById(albumId) { 
         return axios.get(ALBUM_API_BASE_URL + '/getAlbum/' + albumId); 
     }
 
-    getAllAlbums() {
+    getAllAlbums() { // OKAY
         return axios.get(ALBUM_API_BASE_URL + '/getAllAlbums'); 
     }
 
-    deleteAlbum(album) { // USING ALBUM INSTEAD OF ALBUMID
+    deleteAlbum(album) { 
         return axios.delete(ALBUM_API_BASE_URL + '/deleteAlbum', album); 
     }
 
-    updateAlbum(album) { // NOT USING ALBUMID - DOES IT MATTER THAT THERE'S NO ID IN THE PATH? 
+    updateAlbum(album) { 
         return axios.put(ALBUM_API_BASE_URL + '/updateAlbum', album);  
     }
 
