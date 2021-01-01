@@ -16,8 +16,8 @@ class AlbumService {
         return axios.get(ALBUM_API_BASE_URL + '/getAllAlbums'); 
     }
 
-    deleteAlbum(album) { 
-        return axios.delete(ALBUM_API_BASE_URL + '/deleteAlbum', album); 
+    deleteAlbum(album) {
+        return axios.delete(ALBUM_API_BASE_URL + '/deleteAlbum', { data: album }); 
     }
 
     updateAlbum(album) { 

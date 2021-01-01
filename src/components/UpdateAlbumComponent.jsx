@@ -6,7 +6,7 @@ class UpdateAlbumComponent extends Component {
         super(props)
 
         this.state = {
-            id: this.props.match.params.id,
+            albumId: this.props.match.params.id,
             albumName: '',
             artistName: '',
             genre: '', 
@@ -23,6 +23,7 @@ class UpdateAlbumComponent extends Component {
         AlbumService.getAlbumById(this.state.id).then( (res) =>{
             let album = res.data;
             this.setState({
+                albumId: this.state.id,
                 albumName: album.albumName,
                 artistName: album.artistName,
                 genre: album.genre, 
@@ -33,7 +34,9 @@ class UpdateAlbumComponent extends Component {
 
     updateAlbum = (e) => {
         e.preventDefault();
+        console.log(this.state.id); 
         let album = {
+            albumId: this.state.id,
             albumName: this.state.albumName,
             artistName: this.state.artistName,
             genre: this.state.genre, 
@@ -41,7 +44,7 @@ class UpdateAlbumComponent extends Component {
         };
         console.log('album => ' + JSON.stringify(album));
         console.log('id => ' + JSON.stringify(this.state.id));
-        AlbumService.updateAlbum(album, this.state.id).then( res => {
+        AlbumService.updateAlbum(album).then( res => {
             this.props.history.push('/album-crud-frontend/albums');
         });
     }

@@ -3,13 +3,13 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import ListAlbumComponent from './components/ListAlbumComponent'; 
 import HeaderComponent from './components/HeaderComponent'; 
-import FooterComponent from './components/FooterComponent'; 
 import CreateAlbumComponent from './components/CreateAlbumComponent'; 
 import ViewAlbumComponent from './components/ViewAlbumComponent'; 
+// import UpdateAlbumComponent from './components/UpdateAlbumComponent'; 
 
 function App() {
   return (
-    <div>
+    <div className="dark-bg-white-text">
       <Router>
         <HeaderComponent/>
         <div className="container">
@@ -20,7 +20,6 @@ function App() {
             <Route path="/album-crud-frontend/view-album/:id" exact component={ViewAlbumComponent}></Route>
           </Switch>
         </div>
-        <FooterComponent/>
       </Router>
     </div>
   );

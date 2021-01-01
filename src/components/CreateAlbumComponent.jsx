@@ -40,15 +40,15 @@ class CreateAlbumComponent extends Component {
 
     saveOrUpdateAlbum = (e) => {
         e.preventDefault(); 
-        let album = { albumName: this.state.albumName, artistName: this.state.artistName, genre: this.state.genre, releaseYear: this.state.releaseYear }; 
-        console.log('album => ' + JSON.stringify(album)); 
-
+        
         if (this.state.id === '_add') {
+            let album = { albumName: this.state.albumName, artistName: this.state.artistName, genre: this.state.genre, releaseYear: this.state.releaseYear }; 
             AlbumService.addAlbum(album).then( res => {
                 this.props.history.push('/album-crud-frontend/albums'); 
             }); 
         } else {
-            AlbumService.updateAlbum(album, this.state.id).then( res => {
+            let album = { albumId: this.state.id, albumName: this.state.albumName, artistName: this.state.artistName, genre: this.state.genre, releaseYear: this.state.releaseYear }; 
+            AlbumService.updateAlbum(album).then( res => {
                 this.props.history.push('/album-crud-frontend/albums'); 
             }); 
         }
@@ -88,30 +88,30 @@ class CreateAlbumComponent extends Component {
                 <br></br>
                 <div className="container">
                     <div className="row">
-                        <div className="card col-md-6 offset-md-3">
+                        <div className="card col-md-6 offset-md-3 dark-bg-white-text">
                             {
                                 this.getTitle()
                             }
-                            <div className="card-body">
+                            <div className="card-body ">
                                 <form>
                                     <div className="form-group">
                                         <label>Artist Name: </label>
-                                        <input placeholder="Artist Name" name="artistName" className="form-control" value={this.state.artistName} onChange={this.changeArtistNameHandler}/>
+                                        <input placeholder="Artist Name" name="artistName" className="form-control dark-bg-white-text" value={this.state.artistName} onChange={this.changeArtistNameHandler}/>
                                     </div>
                                     <div className="form-group">
                                         <label>Album Name: </label>
-                                        <input placeholder="Album Name" name="albumName" className="form-control" value={this.state.albumName} onChange={this.changeAlbumNameHandler}/>
+                                        <input placeholder="Album Name" name="albumName" className="form-control dark-bg-white-text" value={this.state.albumName} onChange={this.changeAlbumNameHandler}/>
                                     </div>
                                     <div className="form-group">
                                         <label>Genre: </label>
-                                        <input placeholder="Genre" name="genre" className="form-control" value={this.state.genre} onChange={this.changeGenreHandler}/>
+                                        <input placeholder="Genre" name="genre" className="form-control dark-bg-white-text" value={this.state.genre} onChange={this.changeGenreHandler}/>
                                     </div>
                                     <div className="form-group">
                                         <label>Release Year: </label>
-                                        <input placeholder="Release Year" name="releaseYear" className="form-control" value={this.state.releaseYear} onChange={this.changeReleaseYearHandler}/>
+                                        <input placeholder="Release Year" name="releaseYear" className="form-control dark-bg-white-text" value={this.state.releaseYear} onChange={this.changeReleaseYearHandler}/>
                                     </div>
 
-                                    <button className="btn btn-success" onClick={this.saveOrUpdateAlbum}>Save</button>
+                                    <button className="btn btn-dark" onClick={this.saveOrUpdateAlbum}>Save</button>
                                     <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                 </form>
                             </div>

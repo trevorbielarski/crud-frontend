@@ -12,8 +12,8 @@ class HeaderComponent extends Component {
         return (
             <div>
                 <header>
-                    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                        <div><a href="/album-crud-frontend/" className="navbar-brand">Album Management App</a></div> 
+                    <nav className="navbar navbar-expand-md navbar-dark bg-black">
+                        <div><a href="/album-crud-frontend/" className="navbar-brand">View All Albums</a></div> 
                     </nav>
                 </header>
             </div>

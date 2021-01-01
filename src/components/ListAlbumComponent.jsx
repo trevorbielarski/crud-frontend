@@ -14,9 +14,9 @@ class ListAlbumComponent extends Component {
         this.deleteAlbum = this.deleteAlbum.bind(this); 
     }
 
-    deleteAlbum(id) { 
-        AlbumService.deleteAlbum(id).then( res => { // res is the HTTP response
-            this.setState({albums: this.state.albums.filter(album => album.id !== id)})
+    deleteAlbum(album, id) {
+        AlbumService.deleteAlbum(album).then( res => {
+            this.setState({albums: this.state.albums.filter(album => album.albumId !== id)}) 
         }); 
     }
 
@@ -28,7 +28,7 @@ class ListAlbumComponent extends Component {
         this.props.history.push('/album-crud-frontend/add-album/_add'); 
     }
 
-    editAlbum(id) { // EDITING ALBUM BY ID??? 
+    editAlbum(id) { 
         this.props.history.push(`/album-crud-frontend/add-album/${id}`); 
     }
 
@@ -43,11 +43,11 @@ class ListAlbumComponent extends Component {
             <div>
                 <h2 className="text-center">List of Albums</h2>
                 <div className="row">
-                    <button className="btn btn-primary" onClick={this.addAlbum}>Add Album</button>
+                    <button className="btn btn-dark" onClick={this.addAlbum}>Add Album</button>
                 </div>
                 <br></br>
                 <div className="row">
-                    <table className="table table-striped table-bordered">
+                    <table className="table table-striped table-bordered dark-bg-white-text">
                         <thead>
                             <tr>
                                 <th>Album Name</th>
@@ -67,9 +67,9 @@ class ListAlbumComponent extends Component {
                                         <td>{album.genre}</td>
                                         <td>{album.releaseYear}</td>
                                         <td>
-                                            <button onClick={ () => this.editAlbum(album.id)} className="btn btn-info">Update</button>
-                                            <button style={{marginLeft: "10px"}} onClick={ () => this.deleteAlbum(album.id)} className="btn btn-danger">Delete</button>
-                                            <button style={{marginLeft: "10px"}} onClick={ () => this.viewAlbum(album.id)} className="btn btn-info">View</button>
+                                            <button onClick={ () => this.editAlbum(album.albumId) } className="btn btn-dark">Update</button>
+                                            <button style={{ marginLeft: "10px" }} onClick={ () => this.deleteAlbum(album, album.albumId) } className="btn btn-danger">Delete</button>
+                                            <button style={{ marginLeft: "10px" }} onClick={ () => this.viewAlbum(album.albumId)} className="btn btn-dark">View</button>
                                         </td>
                                     </tr>
                                 )
