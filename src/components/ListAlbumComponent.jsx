@@ -36,10 +36,12 @@ class ListAlbumComponent extends Component {
         AlbumService.getAllAlbums().then((res) => { 
             this.setState({ albums: res.data }); 
         }); 
+
     }
 
     render() {
         return (
+
             <div>
                 <h2 className="text-center">List of Albums</h2>
                 <div className="row">
@@ -50,8 +52,8 @@ class ListAlbumComponent extends Component {
                     <table className="table table-striped table-bordered dark-bg-white-text">
                         <thead>
                             <tr>
-                                <th>Album Name</th>
                                 <th>Artist Name</th>
+                                <th>Album Name</th>
                                 <th>Genre</th>
                                 <th>Release Year</th>
                                 <th>Actions</th>
@@ -62,8 +64,8 @@ class ListAlbumComponent extends Component {
                                 this.state.albums.map(
                                     album =>
                                     <tr key={album.id}>
-                                        <td>{album.albumName}</td>
                                         <td>{album.artistName}</td>
+                                        <td>{album.albumName}</td>
                                         <td>{album.genre}</td>
                                         <td>{album.releaseYear}</td>
                                         <td>
