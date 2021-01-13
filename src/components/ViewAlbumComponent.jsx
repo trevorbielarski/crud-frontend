@@ -17,26 +17,31 @@ class ViewAlbumComponent extends Component {
         })
     }
 
+    back(){
+        this.props.history.push('/album-crud-frontend/albums');
+    }
+
     render() {
         return (
             <div>
-                <br></br>
                 <div className="card col-md-6 offset-md-3 dark-bg-white-text">
                     <h3 className="text-center">Album Information</h3>
                     <div className="card-body">
                         <div className="row">
-                            <div className="mb-2"><span className="font-weight-bold">Artist Name: </span>{ this.state.album.artistName }</div>
+                            <div className="mb-2"><u className="font-weight-bold">Artist Name</u>: { this.state.album.artistName }</div>
                         </div>
                         <div className="row">
-                            <div className="mb-2"><span className="font-weight-bold">Album Name: </span>{ this.state.album.albumName }</div>
+                            <div className="mb-2"><u className="font-weight-bold">Album Name</u>: { this.state.album.albumName }</div>
                         </div>
                         <div className="row">
-                            <div className="mb-2"><span className="font-weight-bold">Genre: </span>{ this.state.album.genre }</div>
+                            <div className="mb-2"><u className="font-weight-bold">Genre</u>: { this.state.album.genre }</div>
                         </div>
                         <div className="row">
-                            <div><span className="font-weight-bold">Release Year: </span>{ this.state.album.releaseYear }</div>
+                            <div><u className="font-weight-bold">Release Year</u>: { this.state.album.releaseYear }</div>
                         </div>
                     </div>
+
+                    <button className="btn btn-dark" onClick={this.back.bind(this)} style={{margin: "0 auto 0 0"}}>View All Albums</button>
                 </div>
             </div>
         )
