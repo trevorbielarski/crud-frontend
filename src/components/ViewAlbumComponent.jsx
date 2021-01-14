@@ -18,7 +18,7 @@ class ViewAlbumComponent extends Component {
     }
 
     back(){
-        this.props.history.push('/album-crud-frontend/albums');
+        this.props.history.push('/crud-frontend/albums');
     }
 
     render() {

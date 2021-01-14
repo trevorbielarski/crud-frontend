@@ -11,10 +11,10 @@ function App() {
       <Router>
         <div className="container">
           <Switch>
-            <Route path="/album-crud-frontend/" exact component={ListAlbumComponent}></Route>
-            <Route path="/album-crud-frontend/albums" exact component={ListAlbumComponent}></Route>
-            <Route path="/album-crud-frontend/add-album/:id" exact component={CreateAlbumComponent}></Route>
-            <Route path="/album-crud-frontend/view-album/:id" exact component={ViewAlbumComponent}></Route>
+            <Route path="/crud-frontend/" exact component={ListAlbumComponent}></Route>
+            <Route path="/crud-frontend/albums" exact component={ListAlbumComponent}></Route>
+            <Route path="/crud-frontend/add-album/:id" exact component={CreateAlbumComponent}></Route>
+            <Route path="/crud-frontend/view-album/:id" exact component={ViewAlbumComponent}></Route>
           </Switch>
         </div>
       </Router>

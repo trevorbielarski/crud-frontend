@@ -44,12 +44,12 @@ class CreateAlbumComponent extends Component {
         if (this.state.id === '_add') {
             let album = { albumName: this.state.albumName, artistName: this.state.artistName, genre: this.state.genre, releaseYear: this.state.releaseYear }; 
             AlbumService.addAlbum(album).then( res => {
-                this.props.history.push('/album-crud-frontend/albums'); 
+                this.props.history.push('/crud-frontend/albums'); 
             }); 
         } else {
             let album = { albumId: this.state.id, albumName: this.state.albumName, artistName: this.state.artistName, genre: this.state.genre, releaseYear: this.state.releaseYear }; 
             AlbumService.updateAlbum(album).then( res => {
-                this.props.history.push('/album-crud-frontend/albums'); 
+                this.props.history.push('/crud-frontend/albums'); 
             }); 
         }
     }
@@ -71,7 +71,7 @@ class CreateAlbumComponent extends Component {
     }
 
     cancel() {
-        this.props.history.push('/album-crud-frontend/albums'); 
+        this.props.history.push('/crud-frontend/albums'); 
     }
 
     getTitle() {
